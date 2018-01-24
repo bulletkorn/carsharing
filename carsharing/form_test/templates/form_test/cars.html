@@ -1,0 +1,10 @@
+{% extends "form_test/wrapper.html" %}
+
+{%block body%}
+    {%for car in object_list %}
+      <div class='container'>
+        <h5>Автомобиль: {{car.car_model}}</h5>
+        <p>Гос.номер:{{car.car_number}}</p>
+      </div>
+    {% endfor %}
+{%endblock%}

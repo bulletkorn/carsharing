@@ -1,0 +1,12 @@
+{% extends "form_test/wrapper.html" %}
+
+{%block body%}
+      <div class='container'>
+        <table border="1" >
+          <tr><th>Автомобиль</th><th>ФИО арендатора</th><th>Дата начала</th><th>Место начала</th><th>Дата возврата</th><th>Место возврата</th></tr>
+          {%for row in object_list %}
+          <tr><td>{{row.car}}</td><td>{{row.t_fio}}</td><td>{{row.start_dt}}</td><td>{{row.start_place}}</td><td>{{row.end_dt}}</td><td>{{row.end_place}}</td></tr>
+          {% endfor %}
+        </table>
+      </div>
+{%endblock%}

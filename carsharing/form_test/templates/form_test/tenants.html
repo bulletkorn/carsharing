@@ -1,0 +1,9 @@
+{% extends "form_test/wrapper.html" %}
+
+{%block body%}
+{%for tenant in object_list %}
+  <div class='container'>
+    <h5>Арендатор:{{tenant.sname}} {{tenant.fname}} {{tenant.mname}}</h5>
+  </div>
+{% endfor %}
+{%endblock%}

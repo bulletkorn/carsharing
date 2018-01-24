@@ -1,0 +1,13 @@
+{% extends "form_test/wrapper.html" %}
+
+{%block body%}
+<div class="jumbotron">
+  <div class="container">
+    <form action="/add_car/" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" class="button" value="Зарегистрировать автомобиль">
+    </form>
+  </div>
+</div>
+{%endblock%}
